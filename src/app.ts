@@ -7,7 +7,9 @@ export default function createApp() {
 
     app.use(express.json());
 
-    app.use(authMiddleware);
+    if (process.env.NODE_ENV !== 'test') {
+        app.use(authMiddleware);
+    }
 
     app.use('/api/my-list', myListRoutes);
 

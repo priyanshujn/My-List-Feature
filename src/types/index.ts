@@ -1,6 +1,6 @@
 type Genre = 'Action' | 'Comedy' | 'Drama' | 'Fantasy' | 'Horror' | 'Romance' | 'SciFi';
 
-interface User {
+export interface User {
     id: string;
     username: string;
     preferences: {
@@ -14,7 +14,7 @@ interface User {
     }>;
 }
 
-interface Movie {
+export interface Movie {
     id: string;
     title: string;
     description: string;
@@ -24,8 +24,7 @@ interface Movie {
     actors: string[];
 }
 
-
-interface TVShow {
+export interface TVShow {
     id: string;
     title: string;
     description: string;
